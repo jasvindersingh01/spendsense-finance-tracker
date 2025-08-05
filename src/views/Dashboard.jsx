@@ -75,8 +75,7 @@ const Dashboard = () => {
 
     return (
  <div className="px-4 py-6 space-y-6">
-
-  {/* ✅ Summary Cards Section */}
+  
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
     {summeryCard.map((card, index) => (
       <div key={index} className="p-4 rounded-xl shadow-md bg-white dark:bg-gray-800 text-gray-900 dark:text-white flex items-center justify-between">

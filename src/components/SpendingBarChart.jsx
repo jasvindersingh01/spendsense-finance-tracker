@@ -3,7 +3,9 @@ import { data } from "react-router-dom";
 import { BarChart, XAxis, YAxis, Tooltip, Bar, ResponsiveContainer, CartesianGrid } from "recharts";
 
 const SpendingBarChart = ({ transaction }) => {
-    const grouped = transaction.reduce((acc, tx) => {
+    const grouped = transaction
+    .filter((tx) => tx.amount < 0)
+    .reduce((acc, tx) => {
         
         const date = tx.date
 

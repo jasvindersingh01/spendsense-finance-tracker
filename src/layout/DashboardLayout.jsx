@@ -5,8 +5,10 @@ import React from 'react'
 
 const DashboardLayout = () => {
     return (
-            <div>
+            <div> 
+                <div className="flex">
                 <Navbar />
+                </div>
                 <main>
                     < Outlet />
                 </main>
