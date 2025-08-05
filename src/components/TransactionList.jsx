@@ -16,7 +16,7 @@ const TransactionList = ({ transactions, onDelete }) => {
     <span className="text-right">Action</span>
   </div>
 
-  <div className="mt-2 max-h-[300px] overflow-y-auto">
+  <div className="mt-2 min-h-[300px] max-h-[300px] overflow-y-auto">
     <ul className="space-y-2">
       {transactions.slice().reverse().map((tx) => (
         <li
