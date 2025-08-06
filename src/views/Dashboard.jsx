@@ -48,6 +48,14 @@ const Dashboard = () => {
         localStorage.setItem("transactions", JSON.stringify());
     };
 
+    const handleClearAll = () => {
+      const confirmClear = window.confirm("Are you sure you want to delete all transaction?");
+      if (!confirmClear) return;
+
+      setTransactions([]);
+      localStorage.removeItem("transactions")
+    }
+
     data.remainingBudget = data.budget - data.monthlySpending;
 
     const summeryCard = [
@@ -126,7 +134,7 @@ const Dashboard = () => {
       <AddTransaction onAdd={(newTx) => setTransactions([...transactions, newTx])} />
     </div>
     <div className="w-full lg:w-1/2">
-      <TransactionList transactions={transactions} onDelete={handleDelete} />
+      <TransactionList transactions={transactions} onDelete={handleDelete} clearAll={handleClearAll} />
     </div>
   </div>
 </div>

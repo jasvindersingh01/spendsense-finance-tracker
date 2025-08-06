@@ -1,11 +1,18 @@
 import React from 'react';
 import { Trash2 } from 'lucide-react';
 
-const TransactionList = ({ transactions, onDelete }) => {
+const TransactionList = ({ transactions, onDelete, clearAll }) => {
   return (
     <div className="bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl shadow p-5 w-full">
-  <h2 className="text-lg font-semibold mb-3 border-b border-gray-300 dark:border-gray-700 pb-1">
+  <h2 className="text-lg font-semibold mb-3 border-b border-gray-300 dark:border-gray-700 pb-1 flex items-center justify-between">
     Transaction List
+     <button
+              onClick={clearAll}
+              title="Clear All Transaction"
+              className="text-red-500 hover:text-red-700"
+            >
+              <Trash2 size={20} />
+            </button>
   </h2>
 
   <div className="hidden md:grid grid-cols-5 text-sm font-semibold border-b border-gray-400 dark:border-gray-600 pb-2 text-gray-700 dark:text-gray-300">

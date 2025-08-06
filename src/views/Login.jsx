@@ -64,7 +64,7 @@ function Login() {
     </button>
 
     <div className="flex m-5 justify-center items-center">
-      New user? <Link to="/signup" className="text-blue-400 ml-1">Sign Up</Link>
+      Don’t have an account? <Link to="/signup" className="text-blue-400 ml-1">Sign Up</Link>
     </div>
   </form>
 </div>
